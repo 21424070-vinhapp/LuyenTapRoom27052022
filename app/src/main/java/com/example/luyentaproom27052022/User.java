@@ -22,11 +22,28 @@ public class User implements Serializable {
 
     private String username;
     private String address;
+    //private String year;
+
+//    public String getYear() {
+//        return year;
+//    }
+
+//    public void setYear(String year) {
+//        this.year = year;
+//    }
 
     public User(String username, String address) {
         this.username = username;
         this.address = address;
     }
+
+
+//    public User(String username, String address, String year) {
+//        this.username = username;
+//        this.address = address;
+//        this.year = year;
+//    }
+
     public String getUsername() {
         return username;
     }

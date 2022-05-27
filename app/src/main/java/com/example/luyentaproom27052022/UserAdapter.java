@@ -54,6 +54,7 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserViewHolder
 
         holder.mTxtUsername.setText(user.getUsername());
         holder.mTxtAddress.setText(user.getAddress());
+        //holder.mTxtYear.setText(user.getYear());
 
         holder.mBtnEdit.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -81,7 +82,7 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserViewHolder
 
     class UserViewHolder extends RecyclerView.ViewHolder{
 
-        TextView mTxtUsername, mTxtAddress;
+        TextView mTxtUsername, mTxtAddress, mTxtYear;
         Button mBtnEdit, mBtnDelete;
         public UserViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -89,6 +90,7 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserViewHolder
             mTxtUsername=itemView.findViewById(R.id.txtUserName);
             mBtnEdit=itemView.findViewById(R.id.btnEdit);
             mBtnDelete=itemView.findViewById(R.id.btnDelete);
+            mTxtYear=itemView.findViewById(R.id.txtYear);
         }
     }
 

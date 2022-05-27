@@ -88,8 +88,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public boolean onEditorAction(TextView textView, int i, KeyEvent keyEvent) {
                 //i la action id
-                if(i== EditorInfo.IME_ACTION_SEARCH)
-                {
+                if (i == EditorInfo.IME_ACTION_SEARCH) {
                     //Logic search
                     handleSearchUser();
                 }
@@ -99,9 +98,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void handleSearchUser() {
-        String strName=mainBinding.edtFind.getText().toString().trim();
+        String strName = mainBinding.edtFind.getText().toString().trim();
         mListUser.clear();
-        mListUser=UserDatabase.getInstance(MainActivity.this).userDAO().searchUser(strName);
+        mListUser = UserDatabase.getInstance(MainActivity.this).userDAO().searchUser(strName);
 
         userAdapter.setData(mListUser);
     }
@@ -169,13 +168,14 @@ public class MainActivity extends AppCompatActivity {
 
         String strUsername = mainBinding.edtUsername.getText().toString().trim();
         String strAddress = mainBinding.edtAddress.getText().toString().trim();
+        String strYear = mainBinding.edtYear.getText().toString().trim();
 
         if (TextUtils.isEmpty(strAddress) || TextUtils.isEmpty(strUsername)) {
             return;
         }
 
+        //User user = new User(strUsername, strAddress,strYear);
         User user = new User(strUsername, strAddress);
-
         if (isUser(user)) {
             Toast.makeText(this, "user exist", Toast.LENGTH_SHORT).show();
             return;
@@ -190,11 +190,11 @@ public class MainActivity extends AppCompatActivity {
 
         mainBinding.edtAddress.setText("");
         mainBinding.edtUsername.setText("");
+        mainBinding.edtYear.setText("");
 
         loadData();
 
     }
-
 
     private void addControll() {
         mainBinding = ActivityMainBinding.inflate(getLayoutInflater());
@@ -206,7 +206,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void loadData() {
-        mListUser = UserDatabase.getInstance(this).userDAO().getUser();
+        mListUser = UserDatabase.getInstance(MainActivity.this).userDAO().getUser();
         userAdapter.setData(mListUser);
     }
 
