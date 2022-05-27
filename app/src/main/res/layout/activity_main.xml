@@ -21,6 +21,9 @@
         android:hint="Address"
         android:textSize="16sp" />
 
+
+
+
     <Button
         android:id="@+id/btnButton"
         android:layout_width="match_parent"
@@ -28,6 +31,28 @@
         android:layout_marginTop="10dp"
         android:text="ADD USER"
         android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/edtFind"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:hint="Enter Name"
+        android:inputType="text"
+        android:imeOptions="actionSearch"
+        android:padding="15dp"
+        android:background="@drawable/bg_white_border_gray"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/edtDeleteAll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Delete all"
+        android:gravity="end"
+        android:textColor="#E91E63"
+        android:textSize="20sp"
+        android:paddingBottom="20dp"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rcv_user"

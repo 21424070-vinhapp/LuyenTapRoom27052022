@@ -3,7 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/AndroidStudioProjects/LuyenTapRoom27052022/app/src/main/res/drawable/bg_white_border_gray.xml" value="0.17" />
+        <entry key="..\:/AndroidStudioProjects/LuyenTapRoom27052022/app/src/main/res/layout-v31/item_user.xml" value="0.16197916666666667" />
         <entry key="..\:/AndroidStudioProjects/LuyenTapRoom27052022/app/src/main/res/layout/activity_main.xml" value="0.4" />
+        <entry key="..\:/AndroidStudioProjects/LuyenTapRoom27052022/app/src/main/res/layout/activity_update.xml" value="0.24010416666666667" />
         <entry key="..\:/AndroidStudioProjects/LuyenTapRoom27052022/app/src/main/res/layout/item_user.xml" value="0.24010416666666667" />
       </map>
     </option>
