@@ -8,14 +8,13 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.luyentaproom27052022.databinding.ActivityMainBinding;
 
 import java.util.List;
 
 public class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserViewHolder> {
 
     private List<User> mListUser;
-    private void setData(List<User> list)
+    public void setData(List<User> list)
     {
         this.mListUser=list;
         notifyDataSetChanged();
